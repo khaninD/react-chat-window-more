@@ -12,7 +12,7 @@
   transition: box-shadow 0.2s ease-in-out;
   cursor: pointer;
   &:hover {
-    box-shadow: 0 0px 27px 1.5px rgba(0,0,0,0.2);
+    box-shadow: 0 0px 27px 10px rgba(0,0,0,0.22);
   }
   .rc-laucher__logo {
     position: relative;
@@ -22,7 +22,7 @@
     .rc-laucher__logo-base {
       opacity: 1;
       width: 100%;
-      transition: opacity 0.1s ease-in-out;
+      transition: all 0.2s ease-in-out;
       cursor: pointer
     }
     .rc-laucher__logo-close {
@@ -31,7 +31,7 @@
       width: 20px;
       height: 20px;
       cursor: pointer;
-      transition: opacity 0.1s ease-in-out;
+      transition: opacity 0.2s ease-in-out;
     }
   }
 }
@@ -43,6 +43,5 @@
   }
   .rc-laucher__logo-close {
     opacity: 1;
-    transform: rotate(-90deg);
   }
 }

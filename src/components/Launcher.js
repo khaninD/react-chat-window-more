@@ -1,10 +1,27 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import isFunction from 'lodash/isFunction'
 import launcherIcon from './../assets/images/logo-no-bg.svg'
 import closeIcon from './../assets/images/close-icon.png'
+import { LaucherConstants } from '../constants'
 
+const {
+  closeButtonAlt,
+  logoAlt
+} = LaucherConstants
 export default class Launcher extends Component {
+  static defaultProps = {
+    customStyle: null,
+    customChatIcon: [
+      <img key={0} src={launcherIcon} className='rc-laucher__logo-base' alt={logoAlt} />,
+      <img key={1} src={closeIcon} className='rc-laucher__logo-close' alt={closeButtonAlt} />
+    ]
+  }
+  static propTypes = {
+    customStyle: PropTypes.object,
+    customChatIcon: PropTypes.oneOfType([ PropTypes.element, PropTypes.arrayOf(PropTypes.element) ])
+  }
   constructor(props) {
     super()
     this.state = {
@@ -15,17 +32,16 @@ export default class Launcher extends Component {
   handleClick = () => this.setState({ isOpen: !this.state.isOpen })
 
   render() {
-    const { customStyle } = this.props
+    const { customStyle, customChatIcon } = this.props
     const isOpen = this.props.hasOwnProperty('isOpen') ? this.props.isOpen : this.state.isOpen
     const classList = classNames({
       'rc-laucher': true,
       opened: isOpen
     })
     return (
-      <div style={customStyle || null} className={classList} onClick={this.handleClick}>
+      <div style={customStyle} className={classList} onClick={this.handleClick}>
         <div className='rc-laucher__logo'>
-          <img src={launcherIcon} className='rc-laucher__logo-base' />
-          <img src={closeIcon} className='rc-laucher__logo-close' />
+          {customChatIcon}
         </div>
       </div>
     )
