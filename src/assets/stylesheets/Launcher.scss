@@ -1,4 +1,4 @@
-.reach-chat-window-more {
+.rc-laucher {
   width: 60px;
   height: 60px;
   background-color: #4e8cff;
@@ -11,4 +11,38 @@
   box-shadow: none;
   transition: box-shadow 0.2s ease-in-out;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0 0px 27px 1.5px rgba(0,0,0,0.2);
+  }
+  .rc-laucher__logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rc-laucher__logo-base {
+      opacity: 1;
+      width: 100%;
+      transition: opacity 0.1s ease-in-out;
+      cursor: pointer
+    }
+    .rc-laucher__logo-close {
+      position: absolute;
+      opacity: 0;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: opacity 0.1s ease-in-out;
+    }
+  }
+}
+
+.rc-laucher.opened {
+  .rc-laucher__logo-base {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  .rc-laucher__logo-close {
+    opacity: 1;
+    transform: rotate(-90deg);
+  }
 }

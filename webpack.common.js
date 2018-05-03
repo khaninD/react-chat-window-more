@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    bundle: [ 'babel-polyfill', './src/code-block.js' ]
+    bundle: [ 'babel-polyfill', './src/index.js' ]
   },
   output: {
     filename: '[name].js',

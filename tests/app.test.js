@@ -10,4 +10,12 @@ describe('Test started app', () => {
     const wrapper = shallow(<Launcher />)
     expect(wrapper.find('div')).toHaveLength(2)
   })
+  it('It\'s render App with custom styles', () => {
+    const style = {
+      left: 0,
+      bottom: 0
+    }
+    const wrapper = shallow(<Launcher customStyle={style} />)
+    expect(wrapper.find('.reach-chat-window-more').prop('style')).toBe(style)
+  })
 })
