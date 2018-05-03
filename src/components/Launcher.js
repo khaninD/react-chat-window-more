@@ -7,7 +7,6 @@ import launcherIconActive from './../assets/images/close-icon.png'
 export default class Launcher extends Component {
   constructor(props) {
     super()
-    console.log(props)
   }
 
   render() {

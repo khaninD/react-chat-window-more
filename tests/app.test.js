@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('Test started app', () => {
   it('it\'s render App ', () => {
-    const wrapper = shallow(<Launcher data={[ 0, 1, 2, 3, 4, 5 ]} />)
+    const wrapper = shallow(<Launcher />)
     expect(wrapper.find('div')).toHaveLength(1)
   })
 })
