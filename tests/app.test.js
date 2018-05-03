@@ -8,6 +8,6 @@ Enzyme.configure({ adapter: new Adapter() })
 describe('Test started app', () => {
   it('it\'s render App ', () => {
     const wrapper = shallow(<Launcher />)
-    expect(wrapper.find('div')).toHaveLength(1)
+    expect(wrapper.find('div')).toHaveLength(2)
   })
 })
