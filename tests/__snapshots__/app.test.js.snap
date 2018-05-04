@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test events matches snapshot 1`] = `
+<div
+  className="rc-laucher opened"
+  onClick={[Function]}
+  style={null}
+>
+  <div
+    className="rc-laucher__logo"
+  >
+    <img
+      alt="react chat logo"
+      className="rc-laucher__logo-base"
+      src={Object {}}
+    />
+    <img
+      alt="react chat close button"
+      className="rc-laucher__logo-close"
+      src={Object {}}
+    />
+  </div>
+  <div
+    className="rc-laucher__chat-container"
+  >
+    <div
+      className="rc-window"
+      style={null}
+    />
+  </div>
+</div>
+`;

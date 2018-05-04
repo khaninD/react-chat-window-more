@@ -9,6 +9,7 @@
     "start": "webpack-dev-server --mode development --config webpack_config/webpack.dev.js",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
+    "updateSh": "jest --updateSnapshot",
     "build-storybook": "build-storybook"
   },
   "repository": {
@@ -52,6 +53,7 @@
     "jsdom": "^11.10.0",
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.4",
+    "react-test-renderer": "^16.3.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "typed.js": "^2.0.6",

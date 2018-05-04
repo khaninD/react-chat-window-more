@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import isFunction from 'lodash/isFunction'
 import launcherIcon from './../assets/images/logo-no-bg.svg'
 import closeIcon from './../assets/images/close-icon.png'
 import { LaucherConstants } from '../constants'
@@ -45,14 +44,17 @@ export default class Launcher extends Component {
       opened: isOpen
     })
     return (
-      <div style={customStyle} className={customClassNames || classList} onClick={this.handleClick}>
-        <div className='rc-laucher__logo'>
-          {customChatIcon}
+      <div className={classList}>
+        <div style={customStyle} className={customClassNames || 'rc-laucher__logo-container'} onClick={this.handleClick}>
+          <div className='rc-laucher__logo'>
+            {customChatIcon}
+          </div>
         </div>
         <div className='rc-laucher__chat-container'>
           <Window />
         </div>
       </div>
+
     )
   }
 }

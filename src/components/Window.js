@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-
+import ChatHeader from './ChatHeader'
 export default class Window extends Component {
   static defaultProps = {
     customWindowStyle: null,
@@ -18,9 +18,17 @@ export default class Window extends Component {
   }
 
   render() {
-    const {customWindowClassNames} = this.props
+    const {customWindowClassNames, customWindowStyle} = this.props
     return (
-      <div className={ customWindowClassNames || 'rc-window' }></div>
+      <div style={customWindowStyle} className={ customWindowClassNames || 'rc-window' }>
+        <ChatHeader />
+        {
+          /*
+            <ChatBody />
+            <ChatFooter />
+           */
+        }
+      </div>
     )
   }
 }

@@ -6,7 +6,8 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
-    hot: true
+    hot: true,
+    port: 9090
   },
   plugins: [
     new htmlWebpackPlugin({
