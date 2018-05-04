@@ -52,7 +52,7 @@
   }
   .rc-laucher__chat-container {
     opacity: 1;
-    bottom: 100px;
+    transform: translateY(-100px);
   }
   .rc-window {
     display: flex;
