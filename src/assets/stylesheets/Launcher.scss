@@ -50,9 +50,11 @@
   .rc-laucher__logo-close {
     opacity: 1;
   }
-
   .rc-laucher__chat-container {
     opacity: 1;
     bottom: 100px;
+  }
+  .rc-window {
+    display: flex;
   }
 }

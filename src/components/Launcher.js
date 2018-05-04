@@ -50,9 +50,7 @@ export default class Launcher extends Component {
           {customChatIcon}
         </div>
         <div className='rc-laucher__chat-container'>
-          {
-            isOpen && <Window />
-          }
+          <Window />
         </div>
       </div>
     )
